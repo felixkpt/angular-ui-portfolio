@@ -1,0 +1,84 @@
+<div
+  class="fixed md:sticky top-3 left-0 w-72 md:block md:w-auto z-[60] bg-[var(--bg-primary)] text-[var(--text)] rounded mt-3 p-1 min-h-screen cursor-default transition-all duration-300 ease-in-out transform"
+  [ngClass]="{
+    'translate-x-0 opacity-100': menuOpen,
+    '-translate-x-full opacity-0 md:translate-x-0 md:opacity-100': !menuOpen,
+  }"
+>
+  <div
+    class="w-32 mx-auto h-36 md:w-56 md:h-68 my-3 overflow-hidden border border-[var(--bg-secondary)] shadow-lg"
+  >
+    <a routerLink="/">
+      <img
+        [src]="'assets/images/' + (dark ? 'avatar-dark.png' : 'avatar-light.png')"
+        alt="Felix Biwott"
+        class="w-full h-full object-cover rounded-xl side-avatar transition-all ease-in-out duration-700"
+        [ngClass]="transitioning ? 'opacity-70' : 'opacity-90'"
+      />
+    </a>
+  </div>
+
+  <div class="flex flex-col justify-center items-center">
+    <div class="text-center">
+      <h1 class="text-3xl font-bold text-[var(--text-primary)]">
+        Felix Biwott
+      </h1>
+      <p class="mt-1 text-xl font-medium text-[var(--text-accent)]">
+        Full-Stack Software Engineer
+      </p>
+      <p class="mt-4 max-w-md mx-auto text-lg">
+        I build resilient, scalable, and cloud-native applications across web
+        and enterprise systems.
+      </p>
+    </div>
+
+    <ul class="mt-10 space-y-3 text-[var(--text-muted)]">
+      <li class="font-medium">
+        <a
+          routerLink="/"
+          routerLinkActive="text-[var(--text-primary)]"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="flex items-center gap-1 transition-transform duration-200 ease-in-out hover:translate-x-[0.1rem] hover:text-[var(--text-primary)]"
+          ><lucide-angular [img]="MoveRight" class="w-4 h-4" /> About</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/experience"
+          routerLinkActive="text-[var(--text-primary)]"
+          class="flex items-center gap-1 transition-transform duration-200 ease-in-out hover:translate-x-[0.1rem] hover:text-[var(--text-primary)]"
+          ><lucide-angular [img]="MoveRight" class="w-4 h-4" /> Experience</a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/projects"
+          routerLinkActive="text-[var(--text-primary)]"
+          class="flex items-center gap-1 transition-transform duration-200 ease-in-out hover:translate-x-[0.1rem] hover:text-[var(--text-primary)]"
+          ><lucide-angular [img]="MoveRight" class="w-4 h-4" /> Projects</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div class="mt-10 flex justify-center space-x-4 text-[var(--text-muted)]">
+    <a href="https://github.com/felixkpt" target="_blank">
+      <lucide-angular
+        [img]="Github"
+        class="w-6 h-6 hover:opacity-80 transition"
+      />
+    </a>
+    <a href="https://linkedin.com/in/felixkpt" target="_blank">
+      <lucide-angular
+        [img]="Linkedin"
+        class="w-6 h-6 hover:opacity-80 transition"
+      />
+    </a>
+    <a href="mailto:felixkpt@gmail.com">
+      <lucide-angular
+        [img]="Mail"
+        class="w-6 h-6 hover:opacity-80 transition"
+      />
+    </a>
+  </div>
+</div>
