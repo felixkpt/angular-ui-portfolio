@@ -17,5 +17,15 @@
   </head>
   <body>
     <app-root></app-root>
+    <script>
+      (function () {
+        // Check if there's a stored redirect path
+        if (sessionStorage.redirect) {
+          const redirectUrl = sessionStorage.redirect;
+          delete sessionStorage.redirect;
+          window.location.href = redirectUrl;
+        }
+      })();
+    </script>
   </body>
 </html>
