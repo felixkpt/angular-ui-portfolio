@@ -71,7 +71,7 @@ export class ProjectsComponent {
         'Containerized the app with Docker and used Nginx for reverse proxy/load balancing.',
         'Reduced employee monitoring and reporting time by over 40%.'
       ],
-      github: 'https://github.com/felixkpt/employee-tracking-system',
+      github: null,
       live: 'https://employee-tracking-system.felixkpt.com',
       skills: [
         'Node.js', 'React', 'PostgreSQL', 'AWS S3',

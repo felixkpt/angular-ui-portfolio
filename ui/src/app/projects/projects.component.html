@@ -22,12 +22,11 @@
           </div>
         </div>
         <div>
-          <div class="text-sm text-[var(--text-muted)] mb-1.5">
-            Links
-          </div>
+          <div class="text-sm text-[var(--text-muted)] mb-1.5">Links</div>
 
           <div class="flex items-center gap-4 text-sm">
             <a
+              *ngIf="project.github"
               [href]="project.github"
               target="_blank"
               class="flex items-center gap-1 text-[var(--text-primary)] hover:opacity-80 transition"
