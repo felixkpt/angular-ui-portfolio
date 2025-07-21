@@ -1,68 +1,65 @@
+<!-- 404.html -->
 <!DOCTYPE html>
 <html>
   <head>
     <title>Redirecting...</title>
     <style>
-      body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-      a { color: #0066cc; text-decoration: underline; cursor: pointer; }
-      .debug { color: #666; font-size: 12px; margin-top: 20px; }
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      a {
+        color: #0066cc;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .debug {
+        color: #666;
+        font-size: 12px;
+        margin-top: 20px;
+      }
     </style>
     <script>
       const baseHref = "/angular-ui-portfolio/";
       const currentPath = window.location.pathname;
-      const isBaseOrValidRoute = currentPath === baseHref || currentPath.startsWith(baseHref);
       
-      console.log("Redirect Debug:", {
+      console.log("404.html debug:", {
         baseHref,
         currentPath,
-        isBaseOrValidRoute,
-        shouldRedirect: !isBaseOrValidRoute
+        shouldRedirect: currentPath !== baseHref && !currentPath.startsWith(baseHref)
       });
 
       function handleRedirect() {
-        if (!isBaseOrValidRoute) {
-          const normalizedPath = currentPath.replace(/^\/+/, '');
-          sessionStorage.setItem("redirect", normalizedPath);
+        if (currentPath !== baseHref && !currentPath.startsWith(baseHref)) {
+          sessionStorage.setItem("redirect", currentPath);
           window.location.href = baseHref;
         }
       }
 
-      // Auto-redirect with timeout fallback
-      if (!isBaseOrValidRoute) {
-        setTimeout(() => {
-          if (window.location.pathname !== baseHref) {
-            handleRedirect();
-          }
-        }, 1500);
-      }
+      // Auto-redirect after 3 seconds if JavaScript fails
+      setTimeout(handleRedirect, 3000);
     </script>
   </head>
   <body>
-    <div id="content">
-      <h1>Loading Portfolio...</h1>
-      <p id="redirect-message" style="display: none;">
-        If not redirected automatically, <a onclick="handleRedirect()">click here</a>.
-      </p>
-    </div>
-
+    <h1>Redirecting...</h1>
+    <p>
+      If you're not automatically redirected, 
+      <a href="/">click here</a>.
+    </p>
+    
     <div class="debug">
-      <p>Path: <strong><span id="currentPath"></span></strong></p>
-      <p>Status: <strong><span id="status"></span></strong></p>
+      Debug info:<br>
+      Current path: <span id="currentPath"></span><br>
+      Redirecting to: <span id="redirectPath"></span>
     </div>
 
     <script>
-      // Display debug info
       document.getElementById('currentPath').textContent = currentPath;
-      document.getElementById('status').textContent = 
-        isBaseOrValidRoute ? "Loading Angular app..." : "Redirecting to base...";
-
-      // Show manual redirect link after 1.5 seconds if still on this page
-      if (!isBaseOrValidRoute) {
-        setTimeout(() => {
-          document.getElementById('redirect-message').style.display = 'block';
-        }, 1500);
-        handleRedirect();
-      }
+      document.getElementById('redirectPath').textContent = baseHref;
+      
+      // Start the redirect
+      handleRedirect();
     </script>
   </body>
 </html>
