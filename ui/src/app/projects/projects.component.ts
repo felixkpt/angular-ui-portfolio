@@ -26,7 +26,7 @@ export class ProjectsComponent {
         'Enabled travel agents to manage bookings and clients efficiently.'
       ],
       github: 'https://github.com/felixkpt/tour-booking-nuxt',
-      live: 'https://travelmate.felixkpt.com',
+      live: null,
       skills: [
         'Laravel', 'Nuxt.js', 'GCP', 'OAuth 2.0',
         'Vue.js', 'MySQL', 'Docker', 'JWT'
@@ -47,7 +47,7 @@ export class ProjectsComponent {
         'Deployed the platform on Azure with CI/CD pipelines for staging and production.'
       ],
       github: 'https://github.com/felixkpt/JobMasterApi',
-      live: 'https://jobmasterai.felixkpt.com',
+      live: null,
       skills: [
         'Angular', '.NET 9', 'OpenAI API', 'Azure',
         'JWT', 'Swagger', 'AI', 'DOCX Export', 'REST API'
@@ -71,7 +71,7 @@ export class ProjectsComponent {
         'Containerized the app with Docker and used Nginx for reverse proxy/load balancing.',
         'Reduced employee monitoring and reporting time by over 40%.'
       ],
-      github: 'https://github.com/felixkpt/employee-tracking-system',
+      github: null,
       live: 'https://employee-tracking-system.felixkpt.com',
       skills: [
         'Node.js', 'React', 'PostgreSQL', 'AWS S3',
@@ -93,7 +93,7 @@ export class ProjectsComponent {
         'Optimized MongoDB queries for fast product search and listing.'
       ],
       github: 'https://github.com/felixkpt/e-commerce-react-fe',
-      live: 'https://shophive.felixkpt.com',
+      live: null,
       skills: [
         'MongoDB', 'Express.js', 'React', 'Node.js',
         'Redux', 'JWT', 'PayPal API', 'REST API'
@@ -114,7 +114,7 @@ export class ProjectsComponent {
         'Improved decision-making by offering predictive analytics to end users.'
       ],
       github: 'https://github.com/felixkpt/matchoracle-be',
-      live: 'https://matchoracle.felixkpt.com',
+      live: null,
       skills: [
         'Laravel', 'Python', 'Machine Learning', 'Microservices',
         'CI/CD', 'GitHub Actions', 'Docker', 'REST APIs'
@@ -135,7 +135,7 @@ export class ProjectsComponent {
         'Optimized for SEO and fast page load with lazy-loaded modules.'
       ],
       github: 'https://github.com/felixkpt/angular-ui-portfolio',
-      live: 'https://felixkpt.com',
+      live: 'https://felixkpt.github.io/angular-ui-portfolio/',
       skills: [
         'Angular', 'Tailwind CSS', 'Firebase Hosting',
         'RxJS', 'WebSocket', 'CI/CD', 'Responsive Design',

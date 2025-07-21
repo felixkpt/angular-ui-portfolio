@@ -22,12 +22,11 @@
           </div>
         </div>
         <div>
-          <div class="text-sm text-[var(--text-muted)] mb-1.5">
-            Links
-          </div>
+          <div class="text-sm text-[var(--text-muted)] mb-1.5">Links</div>
 
           <div class="flex items-center gap-4 text-sm">
             <a
+              *ngIf="project.github; else noGithub"
               [href]="project.github"
               target="_blank"
               class="flex items-center gap-1 text-[var(--text-primary)] hover:opacity-80 transition"
@@ -35,7 +34,17 @@
               <lucide-angular [img]="Github" class="w-4 h-4"></lucide-angular>
               GitHub
             </a>
+            <ng-template #noGithub>
+              <span
+                class="flex items-center gap-1 text-[var(--text-muted)] hover:opacity-80 transition"
+              >
+                <lucide-angular [img]="Github" class="w-4 h-4"></lucide-angular>
+                GitHub
+              </span>
+            </ng-template>
+
             <a
+              *ngIf="project.live; else noLive"
               [href]="project.live"
               target="_blank"
               class="flex items-center gap-1 text-[var(--text-accent)] hover:opacity-80 transition"
@@ -43,6 +52,14 @@
               <lucide-angular [img]="ExternalLink" class="w-4 h-4" />
               Live
             </a>
+            <ng-template #noLive>
+              <span
+                class="flex items-center gap-1 text-[var(--text-muted)] hover:opacity-80 transition"
+              >
+                <lucide-angular [img]="ExternalLink" class="w-4 h-4" />
+                Live
+              </span>
+            </ng-template>
           </div>
         </div>
       </div>
