@@ -1,0 +1,15 @@
+<!-- 404.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // Store the requested path and redirect to index.html
+      sessionStorage.redirect = location.pathname;
+      window.location.replace('/angular-ui-portfolio');
+    </script>
+  </head>
+  <body>
+    <!-- Optional: Show a loading message -->
+    <p>Redirecting...</p>
+  </body>
+</html>
