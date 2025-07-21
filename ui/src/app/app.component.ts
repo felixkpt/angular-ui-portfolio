@@ -14,8 +14,8 @@ import { filter } from 'rxjs/operators';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'portfolio-ui';
-  darkMode = true;
+  title = 'angular-ui-portfolio';
+  darkMode = false;
   spotlightGradient = '';
   targetX = 0;
   targetY = 0;

@@ -71,8 +71,8 @@ export class ProjectsComponent {
         'Containerized the app with Docker and used Nginx for reverse proxy/load balancing.',
         'Reduced employee monitoring and reporting time by over 40%.'
       ],
-      github: 'https://github.com/felixkpt/employee-tracker',
-      live: 'https://employee-tracker.felixkpt.com',
+      github: 'https://github.com/felixkpt/employee-tracking-system',
+      live: 'https://employee-tracking-system.felixkpt.com',
       skills: [
         'Node.js', 'React', 'PostgreSQL', 'AWS S3',
         'AWS EC2', 'CloudFront', 'Docker', 'REST API'
@@ -101,7 +101,7 @@ export class ProjectsComponent {
     },
     {
       name: 'MatchOracle',
-      image: '/assets/images/project-screenshots/Screenshot 2025-07-16 132551.png',
+      image: '/assets/images/project-screenshots/Screenshot 2025-07-21 035820.png',
       year: 2023,
       madeAt: null,
       stack: 'Laravel + Python + ML + MySQL + React',
@@ -134,7 +134,7 @@ export class ProjectsComponent {
         'Used custom WebSocket components for real-time project and event updates.',
         'Optimized for SEO and fast page load with lazy-loaded modules.'
       ],
-      github: 'https://github.com/felixkpt/angular-portfolio',
+      github: 'https://github.com/felixkpt/angular-ui-portfolio',
       live: 'https://felixkpt.com',
       skills: [
         'Angular', 'Tailwind CSS', 'Firebase Hosting',
