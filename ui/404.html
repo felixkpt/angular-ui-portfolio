@@ -23,16 +23,23 @@
     <script>
       const baseHref = "/angular-ui-portfolio/";
       const currentPath = window.location.pathname;
-      
+
       console.log("404.html debug:", {
         baseHref,
         currentPath,
-        shouldRedirect: currentPath !== baseHref && !currentPath.startsWith(baseHref)
+        shouldRedirect:
+          currentPath !== baseHref && !currentPath.startsWith(baseHref),
       });
 
       function handleRedirect() {
         if (currentPath !== baseHref) {
-          sessionStorage.setItem("redirect", currentPath);
+          // Remove baseHref before storing
+          const routePath = currentPath.replace(
+            new RegExp(`^${baseHref}`),
+            "/"
+          );
+
+          sessionStorage.setItem("redirect", routePath);
           window.location.href = baseHref;
         }
       }
@@ -44,20 +51,20 @@
   <body>
     <h1>Redirecting...</h1>
     <p>
-      If you're not automatically redirected, 
+      If you're not automatically redirected,
       <a href="/angular-ui-portfolio">click here</a>.
     </p>
-    
+
     <div class="debug">
-      Debug info:<br>
-      Current path: <span id="currentPath"></span><br>
+      Debug info:<br />
+      Current path: <span id="currentPath"></span><br />
       Redirecting to: <span id="redirectPath"></span>
     </div>
 
     <script>
-      document.getElementById('currentPath').textContent = currentPath;
-      document.getElementById('redirectPath').textContent = baseHref;
-      
+      document.getElementById("currentPath").textContent = currentPath;
+      document.getElementById("redirectPath").textContent = baseHref;
+
       // Start the redirect
       handleRedirect();
     </script>
