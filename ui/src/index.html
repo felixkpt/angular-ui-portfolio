@@ -18,14 +18,14 @@
   <body>
     <app-root></app-root>
     <script>
-      (function () {
-        // Check if there's a stored redirect path
-        if (sessionStorage.redirect) {
-          const redirectUrl = sessionStorage.redirect;
-          delete sessionStorage.redirect;
-          window.location.href = redirectUrl;
-        }
-      })();
+      const baseHref = "/angular-ui-portfolio/";
+      const currentPath = window.location.pathname;
+
+      // Only redirect if we're not already on the base path
+      if (currentPath !== baseHref && !currentPath.startsWith(baseHref)) {
+        sessionStorage.setItem("redirect", currentPath);
+        window.location.href = baseHref;
+      }
     </script>
   </body>
 </html>
