@@ -15,7 +15,7 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'portfolio-ui';
-  darkMode = true;
+  darkMode = false;
   spotlightGradient = '';
   targetX = 0;
   targetY = 0;

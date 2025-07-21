@@ -6,13 +6,13 @@
   }"
 >
   <div
-    class="w-32 mx-auto h-36 md:w-56 md:h-68 my-3 overflow-hidden border border-[var(--bg-secondary)] shadow-lg"
+    class="w-32 mx-auto h-36 md:w-56 md:h-68 my-3 overflow-hidden border-4 p-2 rounded-lg border-[var(--bg-secondary)]"
   >
     <a routerLink="/">
       <img
         [src]="'assets/images/' + (dark ? 'avatar-dark.png' : 'avatar-light.png')"
         alt="Felix Biwott"
-        class="w-full h-full object-cover rounded-xl side-avatar transition-all ease-in-out duration-700"
+        class="w-full h-full object-cover rounded-lg side-avatar transition-all ease-in-out duration-700"
         [ngClass]="transitioning ? 'opacity-70' : 'opacity-90'"
       />
     </a>
