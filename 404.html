@@ -3,9 +3,14 @@
 <html>
   <head>
     <script>
-      // Store the requested path and redirect to index.html
-      sessionStorage.redirect = location.pathname;
-      window.location.replace('/angular-ui-portfolio');
+      const baseHref = "/angular-ui-portfolio/";
+      const currentPath = window.location.pathname;
+
+      // Only redirect if we're not already on the base path
+      if (currentPath !== baseHref && !currentPath.startsWith(baseHref)) {
+        sessionStorage.setItem("redirect", currentPath);
+        window.location.href = baseHref;
+      }
     </script>
   </head>
   <body>

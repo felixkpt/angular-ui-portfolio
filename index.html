@@ -15,14 +15,14 @@
   <body>
     <app-root></app-root>
     <script>
-      const baseHref = "/angular-ui-portfolio/";
-      const currentPath = window.location.pathname;
-
-      // Only redirect if we're not already on the base path
-      if (currentPath !== baseHref && !currentPath.startsWith(baseHref)) {
-        sessionStorage.setItem("redirect", currentPath);
-        window.location.href = baseHref;
-      }
+      (function () {
+        // Check if there's a stored redirect path
+        if (sessionStorage.redirect) {
+          const redirectUrl = sessionStorage.redirect;
+          delete sessionStorage.redirect;
+          window.location.href = redirectUrl;
+        }
+      })();
     </script>
   <script src="/angular-ui-portfolio/polyfills-B6TNHZQ6.js" type="module"></script><script src="/angular-ui-portfolio/main-OQYTIJUP.js" type="module"></script></body>
 </html>
