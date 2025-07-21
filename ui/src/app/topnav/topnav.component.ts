@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LucideAngularModule, Sun, Moon } from 'lucide-angular';
+import { LucideAngularModule, Sun, Moon, Menu, X } from 'lucide-angular';
 
 @Component({
   selector: 'app-topnav',
@@ -20,6 +20,8 @@ export class TopnavComponent {
   @Input() menuOpen!: boolean;
   @Output() toggleMenu = new EventEmitter<boolean>();
 
+  readonly Menu = Menu;
+  readonly X = X;
   readonly Sun = Sun;
   readonly Moon = Moon;
 }

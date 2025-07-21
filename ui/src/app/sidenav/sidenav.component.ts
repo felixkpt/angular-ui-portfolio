@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Github, Linkedin, LucideAngularModule, Mail, MoveRight } from 'lucide-angular';
+import { Github, Linkedin, LucideAngularModule, Mail, MoveRight, X } from 'lucide-angular';
 
 @Component({
   selector: 'app-sidenav',
@@ -20,9 +20,12 @@ export class SidenavComponent {
     }, 10);
   }
 
+  @Output() toggleMenu = new EventEmitter<boolean>();
+
   transitioning = false;
   dark: boolean = false;
 
+  readonly X = X;
   readonly MoveRight = MoveRight
   readonly Github = Github
   readonly Linkedin = Linkedin
