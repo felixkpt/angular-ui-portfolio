@@ -2,19 +2,64 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Redirecting...</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+      a {
+        color: #0066cc;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .debug {
+        color: #666;
+        font-size: 12px;
+        margin-top: 20px;
+      }
+    </style>
     <script>
       const baseHref = "/angular-ui-portfolio/";
       const currentPath = window.location.pathname;
+      
+      console.log("404.html debug:", {
+        baseHref,
+        currentPath,
+        shouldRedirect: currentPath !== baseHref && !currentPath.startsWith(baseHref)
+      });
 
-      // Only redirect if we're not already on the base path
-      if (currentPath !== baseHref && !currentPath.startsWith(baseHref)) {
-        sessionStorage.setItem("redirect", currentPath);
-        window.location.href = baseHref;
+      function handleRedirect() {
+        if (currentPath !== baseHref && !currentPath.startsWith(baseHref)) {
+          sessionStorage.setItem("redirect", currentPath);
+          window.location.href = baseHref;
+        }
       }
+
+      // Auto-redirect after 3 seconds if JavaScript fails
+      setTimeout(handleRedirect, 3000);
     </script>
   </head>
   <body>
-    <!-- Optional: Show a loading message -->
-    <p>Redirecting...</p>
+    <h1>Redirecting...</h1>
+    <p>
+      If you're not automatically redirected, 
+      <a onclick="handleRedirect()">click here</a>.
+    </p>
+    
+    <div class="debug">
+      Debug info:<br>
+      Current path: <span id="currentPath"></span><br>
+      Redirecting to: <span id="redirectPath"></span>
+    </div>
+
+    <script>
+      document.getElementById('currentPath').textContent = currentPath;
+      document.getElementById('redirectPath').textContent = baseHref;
+      
+      // Start the redirect
+      handleRedirect();
+    </script>
   </body>
 </html>
