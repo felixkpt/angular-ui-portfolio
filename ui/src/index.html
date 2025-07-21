@@ -19,11 +19,15 @@
     <app-root></app-root>
     <script>
       (function () {
-        // Check if there's a stored redirect path
-        if (sessionStorage.redirect) {
-          const redirectUrl = sessionStorage.redirect;
-          delete sessionStorage.redirect;
-          window.location.href = redirectUrl;
+        const baseHref = "/angular-ui-portfolio/";
+        const redirectPath = sessionStorage.getItem("redirect");
+
+        if (redirectPath) {
+          console.log("Processing stored redirect:", redirectPath);
+          sessionStorage.removeItem("redirect");
+
+          // Use replaceState to avoid page reload
+          history.replaceState(null, "", baseHref + redirectPath);
         }
       })();
     </script>
