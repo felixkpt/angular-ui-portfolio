@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "portfolio-ui": {
+    "angular-ui-portfolio": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/portfolio-ui",
+            "outputPath": "dist/angular-ui-portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "portfolio-ui:build:production"
+              "buildTarget": "angular-ui-portfolio:build:production"
             },
             "development": {
-              "buildTarget": "portfolio-ui:build:development"
+              "buildTarget": "angular-ui-portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
