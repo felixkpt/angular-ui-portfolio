@@ -13,7 +13,7 @@ export class ProjectsComponent {
   projects = [
     {
       name: 'Tour Booking App',
-      image: '/assets/images/project-screenshots/Screenshot 2025-07-19 214632.png',
+      image: 'assets/images/project-screenshots/Screenshot 2025-07-19 214632.png',
       stack: 'Laravel + Nuxt.js + GCP',
       year: 2024,
       madeAt: null,
@@ -34,7 +34,7 @@ export class ProjectsComponent {
     },
     {
       name: 'JobMaster AI',
-      image: '/assets/images/project-screenshots/Screenshot 2025-07-16 134506.png',
+      image: 'assets/images/project-screenshots/Screenshot 2025-07-16 134506.png',
       year: 2025,
       madeAt: null,
       stack: 'Angular + .NET + OpenAI',
@@ -55,7 +55,7 @@ export class ProjectsComponent {
     },
     {
       name: 'Employee Tracking System',
-      image: '/assets/images/project-screenshots/Screenshot 2025-07-16 132925.png',
+      image: 'assets/images/project-screenshots/Screenshot 2025-07-16 132925.png',
       year: 2025,
       madeAt: 'Griffin Global Technologies',
       stack: 'Node.js + PostgreSQL + React + AWS',
@@ -80,7 +80,7 @@ export class ProjectsComponent {
     },
     {
       name: 'MERN E-Commerce App',
-      image: '/assets/images/project-screenshots/Screenshot 2025-07-17 195541.png',
+      image: 'assets/images/project-screenshots/Screenshot 2025-07-17 195541.png',
       year: 2022,
       madeAt: null,
       stack: 'MongoDB + Express + React + Node',
@@ -101,7 +101,7 @@ export class ProjectsComponent {
     },
     {
       name: 'MatchOracle',
-      image: '/assets/images/project-screenshots/Screenshot 2025-07-21 035820.png',
+      image: 'assets/images/project-screenshots/Screenshot 2025-07-21 035820.png',
       year: 2023,
       madeAt: null,
       stack: 'Laravel + Python + ML + MySQL + React',
@@ -122,7 +122,7 @@ export class ProjectsComponent {
     },
     {
       name: 'My Portfolio Website',
-      image: '/assets/images/project-screenshots/Screenshot 2025-07-16 132551.png',
+      image: 'assets/images/project-screenshots/Screenshot 2025-07-16 132551.png',
       year: 2025,
       madeAt: null,
       stack: 'Angular + Tailwind CSS + Firebase',

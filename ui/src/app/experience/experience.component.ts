@@ -11,7 +11,7 @@ export class ExperienceComponent {
   experiences = [
     {
       role: 'Senior Software Engineer – Griffin Global Technologies',
-      logo: '/assets/images/company-logos/1685756809157.png',
+      logo: 'assets/images/company-logos/1685756809157.png',
       period: 'Jan 2025 – Present',
       location: 'Nyeri, Kenya',
       description: `
@@ -27,7 +27,7 @@ Oversaw a team of six developers, conducted regular code reviews, enforced codin
     },
     {
       role: 'Software Engineer – Calltronix Kenya Limited',
-      logo: '/assets/images/company-logos/1685756809153.gif',
+      logo: 'assets/images/company-logos/1685756809153.gif',
       period: 'Oct 2022 – Dec 2024',
       location: 'Nairobi, Kenya',
       description: `
@@ -43,7 +43,7 @@ Led knowledge-sharing initiatives, mentored junior developers, and promoted a st
     },
     {
       role: 'Full-Stack Developer – Codverts Systems',
-      logo: '/assets/images/company-logos/1685756771136.png',
+      logo: 'assets/images/company-logos/1685756771136.png',
       period: 'Sep 2021 – Oct 2022',
       location: 'Remote – Eldoret, Kenya',
       description: `
@@ -59,7 +59,7 @@ Played a key role in API testing with Postman and coordinated cross-functional t
     },
     {
       role: 'Laravel/Vue Developer – Shara Solutions',
-      logo: '/assets/images/company-logos/1685756788056.jpg',
+      logo: 'assets/images/company-logos/1685756788056.jpg',
       period: 'Jun 2020 – Aug 2021',
       location: 'Nairobi, Kenya',
       description: `
@@ -74,7 +74,7 @@ Configured and optimized Docker-based CI/CD pipelines, and managed deployments u
     },
     {
       role: 'Back-End Developer – C Webs Africa',
-      logo: '/assets/images/company-logos/1685756751632.jpg',
+      logo: 'assets/images/company-logos/1685756751632.jpg',
       period: 'Jun 2018 – Jul 2019',
       location: 'Eldoret, Kenya',
       description: `
