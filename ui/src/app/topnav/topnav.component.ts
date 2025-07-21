@@ -14,9 +14,7 @@ export class TopnavComponent {
   @Output() darkModeChange = new EventEmitter<boolean>();
 
   toggleDarkMode() {
-    this.darkMode = !this.darkMode;
-    document.documentElement.classList.toggle('dark', this.darkMode);
-    this.darkModeChange.emit(this.darkMode);
+    this.darkModeChange.emit(!this.darkMode);
   }
 
   @Input() menuOpen!: boolean;
