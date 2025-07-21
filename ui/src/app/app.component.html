@@ -13,7 +13,7 @@
   <!-- Start Actual content -->
   <app-topnav
     [darkMode]="darkMode"
-    (darkModeChange)="darkMode = $event"
+    (darkModeChange)="onDarkModeChange($event)"
     [menuOpen]="menuOpen"
     (toggleMenu)="menuOpen = $event"
   ></app-topnav>

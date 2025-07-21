@@ -31,8 +31,22 @@ export class AppComponent {
       .subscribe(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' }); // ✅ scroll to top on route change
       });
+
+    const stored = localStorage.getItem('darkMode');
+    this.darkMode = stored === 'true';
+    this.updateHtmlThemeClass();
   }
 
+  updateHtmlThemeClass() {
+    document.documentElement.classList.toggle('dark', this.darkMode);
+  }
+
+  onDarkModeChange(mode: boolean) {
+    this.darkMode = mode;
+    localStorage.setItem('darkMode', String(mode));
+    this.updateHtmlThemeClass();
+  }
+  
   onMouseMove(event: MouseEvent) {
     this.targetX = event.clientX;
     this.targetY = event.clientY;
