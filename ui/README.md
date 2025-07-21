@@ -1,6 +1,6 @@
 # Angular Portfolio UI
 
-A modern, responsive personal portfolio built with Angular 19 and Tailwind CSS. Showcases developer profile, experience timeline, projects, and social links — perfect for hosting on GitHub Pages.
+A modern, responsive personal portfolio built with Angular 19 and Tailwind CSS. Showcases developer profile, experience timeline, projects, and social links — perfect for hosting on GitHub Pages. The app is really awesome!
 
 ![Screenshot](preview.png)
 
