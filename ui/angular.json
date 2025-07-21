@@ -29,7 +29,10 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/angular-ui-portfolio/",
+            "deployUrl": "/angular-ui-portfolio/"
+            
           },
           "configurations": {
             "production": {
