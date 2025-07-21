@@ -31,7 +31,7 @@
       });
 
       function handleRedirect() {
-        if (currentPath !== baseHref && !currentPath.startsWith(baseHref)) {
+        if (currentPath !== baseHref) {
           sessionStorage.setItem("redirect", currentPath);
           window.location.href = baseHref;
         }
