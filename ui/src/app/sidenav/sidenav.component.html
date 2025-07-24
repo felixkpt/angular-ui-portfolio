@@ -8,10 +8,10 @@
   <!-- Hamburger Button (visible on small screens only) -->
   <div class="relative md:hidden mb-4 flex justify-end">
     <button
-      class="p-2 md:hidden bg-gray-200 dark:bg-[var(--bg-primary)]"
+      class="p-2 md:hidden bg-gray-200 dark:bg-[var(--bg-primary)] rounded cursor-pointer"
       (click)="toggleMenu.emit(!this.menuOpen)"
     >
-      <lucide-angular [img]="X" class="w-4 h-4" *ngIf="menuOpen" />
+      <lucide-angular [img]="X" class="w-6 h-6" *ngIf="menuOpen" />
     </button>
   </div>
   <div
@@ -51,7 +51,7 @@
           [routerLinkActiveOptions]="{ exact: true }"
           (click)="toggleMenu.emit(false)"
           class="flex items-center gap-1 transition-transform duration-200 ease-in-out hover:translate-x-[0.1rem] hover:text-[var(--text-primary)]"
-          ><lucide-angular [img]="MoveRight" class="w-4 h-4" /> About</a
+          ><lucide-angular [img]="MoveRight" class="w-6 h-6" /> About</a
         >
       </li>
       <li>
@@ -60,7 +60,7 @@
           routerLinkActive="text-[var(--text-primary)]"
           (click)="toggleMenu.emit(false)"
           class="flex items-center gap-1 transition-transform duration-200 ease-in-out hover:translate-x-[0.1rem] hover:text-[var(--text-primary)]"
-          ><lucide-angular [img]="MoveRight" class="w-4 h-4" /> Experience</a
+          ><lucide-angular [img]="MoveRight" class="w-6 h-6" /> Experience</a
         >
       </li>
       <li>
@@ -69,7 +69,7 @@
           routerLinkActive="text-[var(--text-primary)]"
           (click)="toggleMenu.emit(false)"
           class="flex items-center gap-1 transition-transform duration-200 ease-in-out hover:translate-x-[0.1rem] hover:text-[var(--text-primary)]"
-          ><lucide-angular [img]="MoveRight" class="w-4 h-4" /> Projects</a
+          ><lucide-angular [img]="MoveRight" class="w-6 h-6" /> Projects</a
         >
       </li>
     </ul>
