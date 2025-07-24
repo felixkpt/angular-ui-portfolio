@@ -1,20 +1,20 @@
 <div
-  class="sticky top-0 left-0 z-50 w-full h-[40px] pt-1 px-1 bg-white dark:bg-[var(--bg-primary)] md:bg-inherit md:dark:bg-inherit shadow md:shadow-none rounded md:rounded-none"
+  class="sticky top-0 left-0 z-50 w-full h-[52px] pt-1 px-1 bg-white dark:bg-[var(--bg-primary)] md:bg-inherit md:dark:bg-inherit shadow md:shadow-none rounded md:rounded-none"
 >
   <div class="flex justify-between items-center mb-2">
     <!-- Hamburger Button (visible on small screens only) -->
     <div>
       <button
-        class="p-2 md:hidden bg-gray-200 dark:bg-[var(--bg-primary)]"
+        class="p-2 md:hidden bg-gray-200 dark:bg-[var(--bg-primary)] rounded cursor-pointer"
         (click)="toggleMenu.emit(!this.menuOpen)"
       >
         <lucide-angular
           [img]="Menu"
-          class="w-4 h-4"
+          class="w-6 h-6"
           *ngIf="!menuOpen; else closeIcon"
         />
         <ng-template #closeIcon>
-          <lucide-angular [img]="X" class="w-4 h-4" *ngIf="menuOpen" />
+          <lucide-angular [img]="X" class="w-6 h-6" *ngIf="menuOpen" />
         </ng-template>
       </button>
     </div>
@@ -24,10 +24,10 @@
         class="p-2 z-50 bg-gray-200 dark:bg-[var(--bg-primary)] rounded cursor-pointer"
       >
         <ng-container *ngIf="darkMode; else moon">
-          <lucide-angular [img]="Sun" class="w-4 h-4"></lucide-angular>
+          <lucide-angular [img]="Sun" class="w-6 h-6"></lucide-angular>
         </ng-container>
         <ng-template #moon>
-          <lucide-angular [img]="Moon" class="w-4 h-4"></lucide-angular>
+          <lucide-angular [img]="Moon" class="w-6 h-6"></lucide-angular>
         </ng-template>
       </button>
     </div>

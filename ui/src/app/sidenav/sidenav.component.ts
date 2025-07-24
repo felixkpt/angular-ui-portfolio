@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Github, Linkedin, LucideAngularModule, Mail, MoveRight, X } from 'lucide-angular';
 
@@ -9,7 +9,7 @@ import { Github, Linkedin, LucideAngularModule, Mail, MoveRight, X } from 'lucid
   templateUrl: './sidenav.component.html',
   styleUrl: './sidenav.component.css'
 })
-export class SidenavComponent {
+export class SidenavComponent implements OnInit {
 
   @Input() menuOpen!: boolean;
   @Input() set darkMode(value: boolean) {
@@ -24,6 +24,11 @@ export class SidenavComponent {
 
   transitioning = false;
   dark: boolean = false;
+
+  ngOnInit(): void {
+    const img = new Image();
+    img.src = 'assets/images/avatar-dark.png';
+  }
 
   readonly X = X;
   readonly MoveRight = MoveRight
